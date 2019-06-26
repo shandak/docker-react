@@ -4,7 +4,7 @@ services:
 before_install:
   - docker build -t shandak/docker-react -f Dockerfile.dev .
 script:
-  - docker run shandak/docker-react npm run test --watchAll=false
+  - docker run shandak/docker-react npm run test --watchAll=false -- --coverage
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
