@@ -6,6 +6,11 @@ before_install:
 env:
   - CI="true"
 language: node_js
+node_js:
+  - 8
+cache:
+  directories:
+    - node_modules
 script:
   - docker run shandak/docker-react npm run build
   - npm test
