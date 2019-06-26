@@ -6,7 +6,7 @@ before_install:
 env:
   - CI=true
 script:
-  - docker run shandak/docker-react npm test -- --coverage
+  - docker run shandak/docker-react npm test
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
