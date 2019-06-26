@@ -9,8 +9,9 @@ services:
     volumes:
       #- /app/node_modules
       - ./public:/app/public
+      #- .:/app
       - ./src:/app/src
-      - ./build:/app/build
+      #- ./build:/app/build
 #  test:
 #    build:
 #      context: .

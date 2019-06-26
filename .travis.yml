@@ -1,0 +1,7 @@
+sudo: required
+services:
+  - docker
+before_install:
+  - docker build -t shandak/docker-react -f Dockerfile.dev .
+script:
+  - docker run shandak/docker-react npm run test -- --coverage
