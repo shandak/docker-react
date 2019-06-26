@@ -16,6 +16,4 @@ services:
     volumes:
       - "/app/node_modules"
       - "./:/app"
-    environment:
-      - CI="true"
-    command: npm test
+    command: [sh, -c, "npm run build && npm test"]

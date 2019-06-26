@@ -1,11 +1,11 @@
 FROM node:alpine as builder
 
-WORKDIR /app
+WORKDIR '/app'
 
 # Download and install a dependency
-COPY package.json ./
+COPY package.json .
 RUN npm install
-COPY ./ ./
+COPY . .
 
 CMD npm run build
 
